@@ -1,3 +1,25 @@
+## Python 版本要求
+
+此项目需要 Python 3.10 及以上版本。可以通过以下命令检查当前安装的 Python 版本：
+
+```bash
+python --version
+```
+
+然后，您可以使用 `pip` 安装所需的所有依赖项：
+
+1. 克隆此项目：
+
+```bash
+git clone https://github.com/yourusername/yourproject.git
+cd yourproject
+```
+2. 安装所需的 Python 包：
+
+```bash
+pip install -r requirements.txt
+```
+
 # CSV 文件处理与模型训练使用文档
 
 该工程包含两个脚本：`main.py` 和 `model.py`。`main.py` 负责处理 CSV 文件，训练模型，并生成预测结果；`model.py` 包含实际的模型训练和预测逻辑。
