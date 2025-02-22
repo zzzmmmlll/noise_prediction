@@ -108,7 +108,7 @@ result/
 │       ├── result_plot.png
 │       └── checkpoints/
 │           └── checkpoint_model_1.pkl
-
+```
 
 # 训练过程思路
 
