@@ -10,7 +10,35 @@
 
 ## 目录结构
 
-data/ ├── q0/ │ └── gate_error_gate_sx0_q0.csv └── q1/ └── gate_error_gate_sx1_q1.csv result/ ├── q0/ │ └── gate_error_gate_sx0_q0/ │ ├── predictions.csv │ ├── trained_model.pkl │ └── result_plot.png └── q1/ └── gate_error_gate_sx1_q1/ ├── predictions.csv ├── trained_model.pkl └── result_plot.png
+your-project/
+├── data/                             # 原始 CSV 数据文件夹
+│   ├── q0/                           # 一个子文件夹，存放相关 CSV 文件
+│   │   ├── gate_error_gate_sx0_q0.csv
+│   │   └── another_data.csv
+│   ├── q1/
+│   │   └── some_data.csv
+│   └── raw_data.csv
+├── model.py                          # 模型训练和预测逻辑脚本
+├── program/
+│   └── main.py                       # 主程序，用于处理 CSV 文件并生成结果
+├── result/                           # 存储结果的文件夹
+│   ├── q0/
+│   │   ├── gate_error_gate_sx0_q0/   # 该 CSV 对应的结果文件夹
+│   │   │   ├── predictions.csv
+│   │   │   ├── result_plot.png
+│   │   │   └── trained_model.pkl
+│   │   └── another_data/
+│   │       ├── predictions.csv
+│   │       ├── result_plot.png
+│   │       └── trained_model.pkl
+│   ├── q1/
+│   │   └── some_data/
+│   │       ├── predictions.csv
+│   │       ├── result_plot.png
+│   │       └── trained_model.pkl
+│   └── ...
+└── README.md                         # 项目说明文件
+
 
 
 ## 使用方法
