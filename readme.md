@@ -10,6 +10,7 @@
 
 ## 目录结构
 
+```python
 your-project/
 ├── data/                             # 原始 CSV 数据文件夹
 │   ├── q0/                           # 一个子文件夹，存放相关 CSV 文件
@@ -38,7 +39,7 @@ your-project/
 │   │       └── trained_model.pkl
 │   └── ...
 └── README.md                         # 项目说明文件
-
+```
 
 
 ## 使用方法
