@@ -76,3 +76,40 @@ your-project/
 
 ```bash
 python main.py
+```
+
+## 结果文件夹（`result`）
+
+`result` 文件夹用于存放模型训练和预测的结果。该文件夹包含根据输入的 CSV 数据生成的预测结果文件、模型文件以及预测图像。每个数据文件会生成一个独立的文件夹，文件夹名称与数据文件的相对路径保持一致。文件夹内的内容包括：
+
+1. **`predictions.csv`**：
+   - 该文件包含预测结果，包括每个数据点的真实值、预测值以及对应的误差。
+   - 每个数据文件会生成一个独立的 `predictions.csv` 文件。
+
+2. **`result_plot.png`**：
+   - 该图像文件展示了真实值和预测值的比较。通常用于评估模型的性能，帮助用户直观地了解模型的预测能力。
+   - 图像内容包括真实值与预测值的折线图。
+
+3. **`trained_model.pkl`**：
+   - 该文件是训练后的模型文件，保存了训练好的机器学习模型。用户可以加载该模型进行进一步的预测或增量训练。
+
+4. **`checkpoints/` 文件夹**：
+   - 用于存放模型训练过程中的中间结果（checkpoint）。在训练过程中，如果模型达到某个连续训练次数限制，当前模型会保存为一个 checkpoint 文件，以便稍后使用或恢复。
+
+### `result` 文件夹结构示例：
+
+```text
+result/
+│
+├── q0/                           # 文件夹名称与原数据文件的相对路径相对应
+│   ├── gate_error_gate_sx0_q0/    # 该数据的预测结果和模型保存目录
+│   │   ├── predictions.csv        # 该数据的预测结果文件
+│   │   ├── result_plot.png        # 预测结果的可视化图像
+│   │   └── trained_model.pkl      # 训练后的模型文件
+│   │   └── checkpoints/           # 存储模型训练过程中的 checkpoint 文件
+│   │       └── checkpoint_model_1.pkl
+│   │       └── checkpoint_model_2.pkl
+│   └── another_data/              # 如果有多个数据源，类似的目录结构也会在 result 下创建
+│       ├── predictions.csv
+│       ├── result_plot.png
+│       └── trained_model.pkl
