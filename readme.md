@@ -11,8 +11,8 @@ python --version
 1. 克隆此项目：
 
 ```bash
-git clone https://github.com/yourusername/yourproject.git
-cd yourproject
+git clone https://github.com/zzzmmmlll/noise_prediction.git
+cd noise_prediction
 ```
 2. 安装所需的 Python 包：
 
